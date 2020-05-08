@@ -1,0 +1,15 @@
+[user]
+   name = kazimir-malevich
+   email = kazimir_malevich@nym.hush.com
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+
+[core]
+	editor = /usr/bin/vim
+[color]
+   ui = true
+[push]
+   default = simple
