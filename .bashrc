@@ -1,4 +1,5 @@
 export PATH=$HOME/bin:$PATH
+export PS1="$ "
 
 alias vi='vim'
 alias ..="cd .."
