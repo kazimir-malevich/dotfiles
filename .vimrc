@@ -60,12 +60,6 @@ set t_vb=
 set t_Co=256
 color slate
 
-" Move around splits with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
 " ignore some directories with CTRL-P
 let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|results|build)$'}
 
@@ -83,5 +77,4 @@ let g:vim_markdown_folding_disabled = 1
 " Remove whitespace upon save
 autocmd BufWritePre * %s/\s\+$//e
 
-let g:ale_linters = {'typescript': ['tsserver']}
 let g:ale_fix_on_save = 1
