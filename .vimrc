@@ -53,6 +53,11 @@ set shortmess+=I
 
 " Disable bell when you make a mistake
 set visualbell
+
+" More natural split
+set splitbelow
+set splitright
+
 " Disables error flashes
 set t_vb=
 
