@@ -82,4 +82,7 @@ let g:vim_markdown_folding_disabled = 1
 " Remove whitespace upon save
 autocmd BufWritePre * %s/\s\+$//e
 
+" Ale
+let g:ale_python_executable='python3'
+let g:ale_python_pylint_use_global=1
 let g:ale_fix_on_save = 1
