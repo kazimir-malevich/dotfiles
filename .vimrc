@@ -83,10 +83,6 @@ let g:vim_markdown_folding_disabled = 1
 autocmd BufWritePre * %s/\s\+$//e
 
 " Ale
-let g:ale_linters = {
-  \   'python': ['pylint'],
-  \}
+let b:ale_linters = ['flake8']
 
-let g:ale_python_executable='python3'
-let g:ale_python_pylint_use_global=1
 let g:ale_fix_on_save = 1
