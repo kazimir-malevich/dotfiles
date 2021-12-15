@@ -9,7 +9,7 @@ alias fd=fdfind
 create_dirs() {
   if [ $1 == "java" ]
   then 
-    mkdir -p "src/{main, test}/java"
+    mkdir -p src/{main,test}/java
   fi  
 }
 
