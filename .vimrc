@@ -84,5 +84,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " Ale
 let g:ale_linters = { 'python': ['flake8', 'pyflakes', 'mccabe', 'pycodestyle'] }
+" use sbt incremental compiler for java and scala
+let g:ale_pattern_options = {'\.java': {'ale_enabled': 0}} 
 
 let g:ale_fix_on_save = 1
