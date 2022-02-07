@@ -83,9 +83,7 @@ let g:vim_markdown_folding_disabled = 1
 autocmd BufWritePre * %s/\s\+$//e
 
 " Ale
-let g:ale_linters = { 
-    \   'javascript': ['eslint'],
-  \}
+let g:ale_fixers['javascript'] = ['prettier','eslint']
 
 " Fix files automatically on save
 let g:ale_fix_on_save = 1
