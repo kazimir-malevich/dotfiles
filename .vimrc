@@ -88,3 +88,6 @@ let g:ale_fixers['javascript'] = ['prettier','eslint']
 
 " Fix files automatically on save
 let g:ale_fix_on_save = 1
+
+" Rust
+let g:rustfmt_autosave = 1
