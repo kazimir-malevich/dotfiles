@@ -79,9 +79,6 @@ set laststatus=2
 " disable markdown folding
 let g:vim_markdown_folding_disabled = 1
 
-" Remove whitespace upon save
-autocmd BufWritePre * %s/\s\+$//e
-
 " Ale
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier','eslint']
@@ -91,3 +88,15 @@ let g:ale_fix_on_save = 1
 
 " Rust
 let g:rustfmt_autosave = 1
+
+" https://vi.stackexchange.com/questions/18803/stop-vim-from-deleting-trailing-whitespace
+function! TrimWhitespace()
+  " trailing whitespaces have meaning in markdown so don't try there
+  if &filetype!='markdown'
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+  endif
+endfunction
+
+command! TrimWhitespace call TrimWhitespace()
