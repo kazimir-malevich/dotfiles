@@ -88,6 +88,7 @@ let g:ale_fix_on_save = 1
 
 " Rust
 let g:rustfmt_autosave = 1
+let g:ale_linters = {'rust': ['analyzer']}
 
 " https://vi.stackexchange.com/questions/18803/stop-vim-from-deleting-trailing-whitespace
 function! TrimWhitespace()
