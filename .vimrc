@@ -101,3 +101,5 @@ function! TrimWhitespace()
 endfunction
 
 command! TrimWhitespace call TrimWhitespace()
+
+nnoremap <silent> gd :ALEGoToDefinition<CR>
