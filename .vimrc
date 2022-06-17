@@ -103,3 +103,7 @@ endfunction
 command! TrimWhitespace call TrimWhitespace()
 
 nnoremap <silent> gd :ALEGoToDefinition<CR>
+
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1 
+set completeopt-=preview
