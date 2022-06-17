@@ -1,15 +1,16 @@
 [user]
-   name = kazimir-malevich
-   email = adrian_lewis@hushmail.com
+   	name = kazimir-malevich
+   	email = adrian_lewis@hushmail.com
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-
+  	st = status
+  	ci = commit
+  	br = branch
+  	co = checkout
 [core]
-	editor = /usr/bin/vim
+   	editor = /usr/bin/vim
 [color]
-   ui = true
+	ui = true
 [push]
-   default = simple
+ 	default = simple
+[init]
+	defaultBranch = main
