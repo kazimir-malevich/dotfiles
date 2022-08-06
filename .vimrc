@@ -26,13 +26,10 @@ set backspace=indent,eol,start
 set expandtab
 
 " Set tab size in spaces
-set tabstop=2
+set tabstop=4
 
 " The number of spaces inserted for a tab
-set shiftwidth=2
-
-" python tabbing
-au Filetype python setl et ts=4 sw=4
+set shiftwidth=4
 
 " Turn on line numbers
 set number
@@ -54,16 +51,12 @@ set shortmess+=I
 " Disable bell when you make a mistake
 set visualbell
 
-" More natural split
-set splitbelow
-set splitright
-
 " Disables error flashes
 set t_vb=
 
 " 256 colour schemes
 set t_Co=256
-color slate
+color ron
 
 " ignore some directories with CTRL-P
 let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|results|build)$'}
@@ -79,17 +72,6 @@ set laststatus=2
 " disable markdown folding
 let g:vim_markdown_folding_disabled = 1
 
-" Ale
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier','eslint']
-
-" Fix files automatically on save
-let g:ale_fix_on_save = 1
-
-" Rust
-let g:rustfmt_autosave = 1
-let g:ale_linters = {'rust': ['analyzer']}
-
 " https://vi.stackexchange.com/questions/18803/stop-vim-from-deleting-trailing-whitespace
 function! TrimWhitespace()
   " trailing whitespaces have meaning in markdown so don't try there
@@ -102,8 +84,9 @@ endfunction
 
 command! TrimWhitespace call TrimWhitespace()
 
-nnoremap <silent> gd :ALEGoToDefinition<CR>
+" Ale
+let g:ale_fixers = {}
+let g:ale_fixers = ['prettiera', 'eslint']
 
-set completeopt=menu,menuone,preview,noselect,noinsert
-let g:ale_completion_enabled = 1 
-set completeopt-=preview
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
