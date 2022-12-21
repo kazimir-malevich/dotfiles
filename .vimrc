@@ -59,7 +59,7 @@ set t_Co=256
 color ron
 
 " ignore some directories with CTRL-P
-let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|results|build)$'}
+let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|results|build|node_modules)$'}
 
 " automatic comment disabling
 " http://vim.wikia.com/wiki/Disable_automatic_comment_insertion
