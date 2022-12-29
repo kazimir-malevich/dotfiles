@@ -37,4 +37,6 @@ call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
     Plug 'tc50cal/vim-terminal'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'neoclide/coc.nvim'
 call plug#end()
