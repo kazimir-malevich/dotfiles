@@ -29,3 +29,12 @@ filetype plugin indent on
 
 " Set the leader key to ','
 let mapleader = ","
+
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+
+call plug#begin()
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
+    Plug 'tc50cal/vim-terminal'
+call plug#end()
