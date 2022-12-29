@@ -2,7 +2,6 @@
 
 " Don't show intro
 set shortmess+=I
-
 " Enable syntax highlighting
 syntax on
 
@@ -39,4 +38,5 @@ call plug#begin()
     Plug 'tc50cal/vim-terminal'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'neoclide/coc.nvim'
+    Plug 'sheerun/vim-polyglot'
 call plug#end()
