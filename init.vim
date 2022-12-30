@@ -37,8 +37,14 @@ nmap <C-l> <C-w>l
 call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
-    Plug 'tc50cal/vim-terminal'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'neoclide/coc.nvim'
     Plug 'sheerun/vim-polyglot'
 call plug#end()
+
+" Map escape to exit terminal mode
+:tnoremap <ESC> <C-\><C-n>
+
+" toggle line numbering
+nnoremap <leader>n :set number<CR>
+nnoremap <leader>N :set nonumber<CR>
