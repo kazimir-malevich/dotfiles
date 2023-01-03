@@ -56,6 +56,3 @@ let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|results|build|node_modules)$'
 " <C-g>u breaks current undo, please make your own choice
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" Disable recording
-set norecord
