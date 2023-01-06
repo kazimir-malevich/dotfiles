@@ -40,6 +40,7 @@ call plug#begin()
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'neoclide/coc.nvim'
     Plug 'sheerun/vim-polyglot'
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " Map escape to exit terminal mode
