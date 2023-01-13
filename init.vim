@@ -2,8 +2,12 @@
 
 " Don't show intro
 set shortmess+=I
+
 " Enable syntax highlighting
 syntax on
+
+" Stop mouse
+set mouse=
 
 " Set the tab width to 4 spaces
 set tabstop=4
