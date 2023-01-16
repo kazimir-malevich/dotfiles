@@ -61,3 +61,14 @@ let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|results|build|node_modules)$'
 " <C-g>u breaks current undo, please make your own choice
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+
+" Taking some coc.nvim setting suggestions
+" Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
+" delays and poor user experience
+set updatetime=300
+
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
