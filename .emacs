@@ -29,9 +29,6 @@
 (setq-default indicate-empty-lines t)
 (setq-default indicate-buffer-boundaries 'left)
 
-;; Add a newline automatically at the end of a file while saving.
-(setq-default require-final-newline t)
-
 ;; Consider a period followed by a single space to be end of sentence.
 (setq sentence-end-double-space nil)
 
@@ -106,14 +103,7 @@
 (set-face-foreground 'rainbow-delimiters-depth-8-face "#999")  ; medium gray
 (set-face-foreground 'rainbow-delimiters-depth-9-face "#666")  ; dark gray
 
-;; Custom command.
-(defun show-current-time ()
-  "Show current time."
-  (interactive)
-  (message (current-time-string)))
-
 ;; Custom key sequences.
-(global-set-key (kbd "C-c t") 'show-current-time)
 (global-set-key (kbd "C-c d") 'delete-trailing-whitespace)
 
 ;; Start server.
