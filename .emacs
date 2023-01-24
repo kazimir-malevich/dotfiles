@@ -130,3 +130,10 @@
   (other-window 1)
   (eshell))
 (global-set-key (kbd "C-c t") 'split-and-new-eshell)
+
+;; ESC Cancels All
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+;; We all know what this is
+(require 'evil)
+(evil-mode 1)
