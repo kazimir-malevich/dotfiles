@@ -124,10 +124,9 @@
 ;; Open fullscreen and maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-(defun split-and-new-eshell ()           
-  (interactive)                                    
-  (split-window-vertically)    
-  (other-window 1)                                                   
-  (eshell))                               
-    
+(defun split-and-new-eshell ()
+  (interactive)
+  (split-window-vertically)
+  (other-window 1)
+  (eshell))
 (global-set-key (kbd "C-c t") 'split-and-new-eshell)
