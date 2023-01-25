@@ -74,16 +74,9 @@
 (unless package-archive-contents (package-refresh-contents))
 
 ;; Install packages.
-<<<<<<< HEAD
 (dolist (package '(markdown-mode paredit rainbow-delimiters evil undo-tree evil-collection evil-commentary clojure-mode cider))
 (unless (package-installed-p package)
 (package-install package)))
-=======
-(dolist (package '(markdown-mode paredit rainbow-delimiters evil
-                                 undo-tree evil-collection evil-commentary clojure-mode cider))
-  (unless (package-installed-p package)
-    (package-install package)))
->>>>>>> origin/master
 
 ;; Enable Paredit.
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
