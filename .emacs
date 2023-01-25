@@ -3,8 +3,8 @@
 ;; Customize user interface.
 (menu-bar-mode 0)
 (when (display-graphic-p)
-  (tool-bar-mode 0)
-  (scroll-bar-mode 0))
+(tool-bar-mode 0)
+(scroll-bar-mode 0))
 (setq inhibit-startup-screen t)
 (column-number-mode)
 
@@ -59,8 +59,9 @@
 (setq create-lockfiles nil)
 
 ;; Workaround for https://debbugs.gnu.org/34341 in GNU Emacs <= 26.3.
-(when (and (version< emacs-version "26.3") (>= libgnutls-version 30603))
-  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+(when (and (version< emacs-version "26.3")
+(>= libgnutls-version 30603))
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 
 ;; Write customizations to a separate file instead of this file.
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -70,14 +71,12 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
+(unless package-archive-contents (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(markdown-mode paredit rainbow-delimiters evil
-                                 undo-tree evil-collection evil-commentary clojure-mode cider))
-  (unless (package-installed-p package)
-    (package-install package)))
+(dolist (package '(markdown-mode paredit rainbow-delimiters evil undo-tree evil-collection evil-commentary clojure-mode cider))
+(unless (package-installed-p package)
+(package-install package)))
 
 ;; Enable Paredit.
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
@@ -110,16 +109,16 @@
 ;; Start server.
 (require 'server)
 (unless (server-running-p)
-  (server-start))
+(server-start))
 
 ;; Open fullscreen and maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (defun split-and-new-eshell ()
-  (interactive)
-  (split-window-vertically)
-  (other-window 1)
-  (eshell))
+(interactive)
+(split-window-vertically)
+(other-window 1)
+(eshell))
 (global-set-key (kbd "C-c t") 'split-and-new-eshell)
 
 ;; ESC Cancels All
