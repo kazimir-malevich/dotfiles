@@ -74,7 +74,7 @@
   (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(markdown-mode paredit rainbow-delimiters))
+(dolist (package '(markdown-mode paredit rainbow-delimiters evil undo-tree magit evil-collection evil-commentary))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -124,9 +124,20 @@
 ;; ESC Cancels All
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+;; Evil collection message tells me to put this before evil and evil collection
+(setq evil-want-keybinding nil)
+
+;; We all know what this is!!!
 (require 'evil)
 (evil-mode 1)
 
+;; Need for Vim undo
 (require 'undo-tree)
 (global-undo-tree-mode)
 (setq evil-undo-system 'undo-tree)
+
+;;Register the bindings
+(evil-collection-init)
+
+(evil-commentary-mode)
+
