@@ -74,7 +74,7 @@
   (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(markdown-mode paredit rainbow-delimiters evil undo-tree magit evil-collection evil-commentary))
+(dolist (package '(markdown-mode paredit rainbow-delimiters evil undo-tree evil-collection evil-commentary))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -140,4 +140,3 @@
 (evil-collection-init)
 
 (evil-commentary-mode)
-
