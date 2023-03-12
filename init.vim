@@ -45,6 +45,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim'
     Plug 'sheerun/vim-polyglot'
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'justinmk/vim-sneak'
 call plug#end()
 
 " Map escape to exit terminal mode
@@ -72,3 +73,9 @@ set updatetime=300
 
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
+
+" no word wrap
+set nowrap
+
+"Prevent automatic insertation of comments on new lines
+set formatoptions-=cro
