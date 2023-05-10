@@ -6,6 +6,21 @@
   	ci = commit
   	br = branch
   	co = checkout
+	# a more detailed log view with a graph and author information
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	# undo the most recent git add operation
+	unstage = reset HEAD --
+	# show the last commit on the current branch
+	last = log -1 HEAD
+	# amend the previous commit with new changes
+	amend = commit --amend
+	# undo the most recent commit and keep changes in the working directory
+	undo = reset HEAD^
+	# list all local and remote branches
+	branches = branch -a
+	# list all remote branches
+	remote-branches = branch -r
+
 [core]
    	editor = /usr/bin/vim
 [color]
