@@ -72,6 +72,9 @@ set laststatus=2
 " disable markdown folding
 let g:vim_markdown_folding_disabled = 1
 
+" Prevent Vim from adding an extra space after a full stop when using 'gq'
+set formatoptions-=a
+
 " https://vi.stackexchange.com/questions/18803/stop-vim-from-deleting-trailing-whitespace
 function! TrimWhitespace()
   " trailing whitespaces have meaning in markdown so don't try there
